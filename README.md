@@ -179,4 +179,4 @@ Future Improvements
 - Frontend Integration
 - Email Notifications
 - Dashboard UI
-- JWT AuthenticationThis README is strong enough for recruiters and interviewers to immediately understand the project's scope and technologies.
+- JWT Authentication
