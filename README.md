@@ -1,5 +1,3 @@
-Here's a professional README you can directly paste into GitHub:
-
 🏥 Hospital Management System
 
 A console-based Hospital Management System developed using Java, JDBC, MySQL, DAO Pattern, Singleton Pattern, and BCrypt Authentication. The system helps manage hospital operations such as patient registration, doctor management, appointment scheduling, medical records, billing, and secure user authentication.
