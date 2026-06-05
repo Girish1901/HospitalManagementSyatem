@@ -2,8 +2,6 @@
 
 A console-based Hospital Management System developed using Java, JDBC, MySQL, DAO Pattern, Singleton Pattern, and BCrypt Authentication. The system helps manage hospital operations such as patient registration, doctor management, appointment scheduling, medical records, billing, and secure user authentication.
 
----
-
 🚀 Features
 
 👨‍💼 Admin Module
@@ -52,70 +50,26 @@ A console-based Hospital Management System developed using Java, JDBC, MySQL, DA
 - Role-Based Access Control
 - PreparedStatement Usage to Prevent SQL Injection
 
----
-
-🏗️ Project Structure
-
-src/
-│
-├── DAO/
-│   ├── AdminDao.java
-│   ├── PatientDao.java
-│   ├── DoctorDao.java
-│   ├── StaffDao.java
-│   ├── AppointmentDao.java
-│   ├── MedicalRecordDao.java
-│   └── BillDao.java
-│
-
-
-├── utility/
-│   └── DbConnection.java
-
-
-
-
-├── models/
-│   ├── Admin.java
-│   ├── Patient.java
-│   ├── Doctor.java
-│   ├── Staff.java
-│   ├── Appointment.java
-│   ├── MedicalRecord.java
-│   └── Bill.java
-│
-└── Main.java
-
----
-
 🛠️ Technologies Used
 
 - Java
 - JDBC
 - MySQL
 - BCrypt
-- Object-Oriented Programming (OOP)
+- OOP
 - DAO Pattern
-- Singleton Design Pattern
+- Singleton Pattern
 - Git & GitHub
 
----
-
-📊 Database
-
-The application uses MySQL for data storage.
-
-Main tables:
+📊 Database Tables
 
 - ADMINS
 - PATIENTS
 - DOCTORS
-- STAFFS
+- STAFF
 - APPOINTMENTS
 - MEDICALRECORDS
 - BILLS
-
----
 
 🎯 Design Patterns Used
 
@@ -127,39 +81,9 @@ Singleton Pattern
 
 Ensures a single database connection instance throughout the application.
 
----
+🔐 Authentication
 
-🔐 Authentication Flow
-
-Passwords are never stored in plain text.
-
-BCrypt.hashpw(password, BCrypt.gensalt());
-
-Verification:
-
-BCrypt.checkpw(password, hashedPassword);
-
----
-
-📸 Functionalities
-
-✔ Patient Management
-
-✔ Doctor Management
-
-✔ Staff Management
-
-✔ Appointment Scheduling
-
-✔ Medical Records Management
-
-✔ Billing Management
-
-✔ Secure Authentication
-
-✔ Role-Based Access
-
----
+Passwords are stored securely using BCrypt hashing.
 
 👨‍💻 Author
 
@@ -167,11 +91,9 @@ Girish T
 
 Bachelor of Engineering (Data Science)
 
-Java Backend Developer Aspirant
+Aspiring Java Backend Developer
 
----
-
-Future Improvements
+🚀 Future Improvements
 
 - Spring Boot Migration
 - REST APIs
