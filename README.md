@@ -1,64 +1,179 @@
-# Hospital OOP Java Console App
+Here's a professional README you can directly paste into GitHub:
 
-A menu-driven hospital management **console application** written in Java using an object-oriented design.
+🏥 Hospital Management System
 
-## Features
+A console-based Hospital Management System developed using Java, JDBC, MySQL, DAO Pattern, Singleton Pattern, and BCrypt Authentication. The system helps manage hospital operations such as patient registration, doctor management, appointment scheduling, medical records, billing, and secure user authentication.
 
-- Add **Doctors**
-- Add **Staff**
-- Register **Patients**
-- **Book Appointments** (by patient ID + doctor ID)
-- Add **Medical Records**
-- **Generate Bills** (consultation + medicine + room fees)
-- View **all records** (patients, doctors, staff, appointments, bills, medical records)
+---
 
-## Project Structure
+🚀 Features
 
-- `src/main/` — application classes (package: `main`)
-  - `Main.java` — entry point + CLI menu
-  - `Hospital.java` — central singleton that stores all data
-  - `Patient.java`, `Doctor.java`, `Staff.java`, `Appointment.java`, `MedicalRecord.java`, `Bill.java`
-  - `Admin.java` — extends `Person`
-- `src/utility/` — shared utilities
-  - `Billable.java` — interface used by `Bill`
+👨‍💼 Admin Module
 
-## Build & Run (Windows)
+- Admin Login
+- Add/View/Delete Patients
+- Add/View/Delete Doctors
+- Add/View Staff
+- Schedule Appointments
+- Create Medical Records
+- Generate Bills
+- View Bills
+- View Appointments
 
-> The `out/` folder is used as the compiled output directory.
+👨‍⚕️ Doctor Module
 
-1) Compile:
+- Doctor Login
+- View Assigned Appointments
+- Add Medical Records
+- View Patient Medical History
 
-```powershell
-cd Hospital
-javac -d out src\main\*.java src\utility\*.java
-```
+🧑‍🤝‍🧑 Patient Module
 
-2) Run:
+- Patient Login
+- View Appointments
+- View Medical Records
+- View Bills
+- Pay Bills
 
-```powershell
-java -cp out main.Main
-```
+💰 Billing Module
 
-## CLI Menu Options
+- Generate Bills
+- Track Bill Status
+- Mark Bills as Paid
 
-When the app starts, choose:
+📅 Appointment Module
 
-1. Add doctor
-2. Add staff
-3. Register patient
-4. Book appointment
-5. Add medical record
-6. Generate bill
-7. Show all records
-8. view all patients details
-9. view all doctor details
-10. exit
+- Book Appointments
+- View Appointments by Patient
+- View Appointments by Doctor
+- Cancel Appointments
 
-## Notes
+🔒 Security
 
-- Appointment and record IDs are generated internally.
-- `Hospital` is implemented as a singleton (`Hospital.getInstance()`).
+- BCrypt Password Hashing
+- Role-Based Access Control
+- PreparedStatement Usage to Prevent SQL Injection
 
-## Message
-This project is a learning-focused OOP example (Hospital Management System) implemented as a plain Java console application with classes representing real-world entities like Patient, Doctor, Appointments, Medical Records, and Bills.
+---
 
+🏗️ Project Structure
+
+src/
+│
+├── DAO/
+│   ├── AdminDao.java
+│   ├── PatientDao.java
+│   ├── DoctorDao.java
+│   ├── StaffDao.java
+│   ├── AppointmentDao.java
+│   ├── MedicalRecordDao.java
+│   └── BillDao.java
+│
+├── utility/
+│   └── DbConnection.java
+│
+├── models/
+│   ├── Admin.java
+│   ├── Patient.java
+│   ├── Doctor.java
+│   ├── Staff.java
+│   ├── Appointment.java
+│   ├── MedicalRecord.java
+│   └── Bill.java
+│
+└── Main.java
+
+---
+
+🛠️ Technologies Used
+
+- Java
+- JDBC
+- MySQL
+- BCrypt
+- Object-Oriented Programming (OOP)
+- DAO Pattern
+- Singleton Design Pattern
+- Git & GitHub
+
+---
+
+📊 Database
+
+The application uses MySQL for data storage.
+
+Main tables:
+
+- ADMINS
+- PATIENTS
+- DOCTORS
+- STAFFS
+- APPOINTMENTS
+- MEDICALRECORDS
+- BILLS
+
+---
+
+🎯 Design Patterns Used
+
+DAO Pattern
+
+Separates database operations from business logic.
+
+Singleton Pattern
+
+Ensures a single database connection instance throughout the application.
+
+---
+
+🔐 Authentication Flow
+
+Passwords are never stored in plain text.
+
+BCrypt.hashpw(password, BCrypt.gensalt());
+
+Verification:
+
+BCrypt.checkpw(password, hashedPassword);
+
+---
+
+📸 Functionalities
+
+✔ Patient Management
+
+✔ Doctor Management
+
+✔ Staff Management
+
+✔ Appointment Scheduling
+
+✔ Medical Records Management
+
+✔ Billing Management
+
+✔ Secure Authentication
+
+✔ Role-Based Access
+
+---
+
+👨‍💻 Author
+
+Girish T
+
+Bachelor of Engineering (Data Science)
+
+Java Backend Developer Aspirant
+
+---
+
+Future Improvements
+
+- Spring Boot Migration
+- REST APIs
+- Hibernate/JPA
+- Frontend Integration
+- Email Notifications
+- Dashboard UI
+- JWT AuthenticationThis README is strong enough for recruiters and interviewers to immediately understand the project's scope and technologies.
