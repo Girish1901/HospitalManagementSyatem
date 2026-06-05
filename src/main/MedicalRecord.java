@@ -13,7 +13,7 @@ public class MedicalRecord {
     private LocalDate date;
     private List<String> symptoms;
 
-    public MedicalRecord(String recordId, String patientId, String doctorId, String diagnosis, String prescription) {
+    public MedicalRecord(String recordId, String patientId, String doctorId, String diagnosis, String prescription, String status, java.util.Date date) {
         this.recordId = recordId;
         this.patientId = patientId;
         this.doctorId = doctorId;

@@ -1,6 +1,7 @@
 package main;
 
 import utility.Billable;
+
 import java.time.LocalDate;
 
 public class Bill implements Billable {
@@ -23,6 +24,17 @@ public class Bill implements Billable {
         this.totalAmount = calculateTotal(consultationFee, medicineFee, roomFee);
         this.date = LocalDate.now();
     }
+    public Bill(String billId, String patientId, double consultationFee, double medicineFee, double roomFee, String status,double totalAmount,LocalDate date) {
+        this.billId = billId;
+        this.patientId = patientId;
+        this.consultationFee = consultationFee;
+        this.medicineFee = medicineFee;
+        this.roomFee = roomFee;
+        this.status = status;
+        this.totalAmount = totalAmount;
+        this.date = date;
+    }
+
 
     public String getBillId() {
         return billId;

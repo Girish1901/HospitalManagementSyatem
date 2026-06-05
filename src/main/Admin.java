@@ -2,24 +2,24 @@ package main;
 
 public class Admin extends Person {
     private String adminId;
-    private String role;
+    private String password;
 
-    public Admin(int age, String gender, String phno, String email, String name, String adminId, String role) {
+    public Admin(String adminId,String name,String email,String phno,String gender,int age,String password) {
         super(age, gender, phno, email, name);
         this.adminId = adminId;
-        this.role = role;
+        this.password=password;
     }
 
     public String getAdminId() {
         return adminId;
     }
 
-    public String getRole() {
-        return role;
+    public String getPassword() {
+        return password;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Admin extends Person {
         System.out.println("AdminId: " + this.adminId);
         System.out.println("Admin Name: " + this.getName());
         System.out.println("Email: " + this.getEmail());
-        System.out.println("Role: " + this.role);
+        System.out.println("Role: " + this.password);
         System.out.println("--------------------------------------------------------");
     }
 }

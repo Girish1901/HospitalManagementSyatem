@@ -4,15 +4,33 @@ public class Appointment {
     private String appointmentId;
     private String patientId;
     private String doctorId;
+    private String date;
     private String time;
     private String status;
 
-    public Appointment(String appointmentId, String patientId, String doctorId, String time) {
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Appointment(String appointmentId, String patientId, String doctorId, String date, String time) {
         this.appointmentId = appointmentId;
         this.patientId = patientId;
         this.doctorId = doctorId;
+        this.date=date;
         this.time = time;
         this.status = "SCHEDULED";
+    }
+    public Appointment(String appointmentId, String patientId, String doctorId, String date, String time,String status) {
+        this.appointmentId = appointmentId;
+        this.patientId = patientId;
+        this.doctorId = doctorId;
+        this.date=date;
+        this.time = time;
+        this.status = status;
     }
 
     public String getAppointmentId() {

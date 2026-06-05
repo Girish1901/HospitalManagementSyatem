@@ -8,11 +8,21 @@ public class Doctor extends Person {
     private String specialization;
     private String qualification;
     private double consultationFee;
+    private String password;
     private List<Appointment> appointments = new ArrayList<>();
 
-    public Doctor(int age, String gender, String phno, String email, String name, String doctorId, double consultationFee, String qualification, String specialization) {
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Doctor(String doctorId, String name, String email, String phno, String gender, int age, String qualification, String specialization, double consultationFee, String password) {
         super(age, gender, phno, email, name);
         this.doctorId = doctorId;
+        this.password=password;
         this.consultationFee = consultationFee;
         this.qualification = qualification;
         this.specialization = specialization;

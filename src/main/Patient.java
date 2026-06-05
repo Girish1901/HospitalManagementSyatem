@@ -6,13 +6,24 @@ import java.util.List;
 
 public class Patient extends Person {
     private String patientId;
+    private String password;
     private String bloodGroup;
+
     private List<MedicalRecord> medicalHistory;
     private List<Appointment> appointments;
 
-    public Patient(int age, String gender, String phno, String email, String name, String patientId, String bloodGroup) {
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Patient(String patientId,String name,String email,String phno,String gender,int age,String bloodGroup,String password) {
         super(age, gender, phno, email, name);
         this.patientId = patientId;
+        this.password=password;
         this.bloodGroup = bloodGroup;
         this.medicalHistory = new ArrayList<>();
         this.appointments = new ArrayList<>();
